@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackOffice - Aggiungi un'azienda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="modaleCountdown" class="container-modale">
+        <div class="container-form-modale">
+            <div class="container-info-modale">
+                <h3>Modifica i dati del razzo</h3>
+                <p class="chiudi-modale" id="chiudiModale">&times;</p>
+            </div>
+            <form id="formCountdownModale">
+                <input type="hidden" id="countdownIdModale">
+                <div class="container-voce-form">
+                    <label for="inpRocketModale">Rocket: </label>
+                    <select name="inpRocketModale" id="inpRocketModale">
+
+                    </select>
+                </div>
+                <div class="container-voce-form">
+                    <label for="inplaunchSiteModale">Launch Site:</label>
+                    <input type="text" placeholder="Inserisci il sito di lancio..." id="inplaunchSiteModale">
+                </div>
+    
+                <div class="container-voce-form">
+                    <label for="inpStatusModale">Status: </label>
+                    <select name="inpStatusModale" id="inpStatusModale">
+                        <option value="attivo">Attivo</option>
+                        <option value="in pausa">In pausa</option>
+                        <option value="cancellato">Cancellato</option>
+                    </select>
+                </div>
+    
+                <div class="container-voce-form">
+                    <label for="inpLaunchDateModale">Launch Date:</label>
+                    <input type="datetime-local" id="inpLaunchDateModale">
+                </div>
+    
+                <div class="container-voce-form">
+                    <label for="inpDescriptionModale">Description:</label>
+                    <input type="text" placeholder="Inserisci la descrizione del lancio..." id="inpDescriptionModale">
+                </div>
+    
+                <div class="container-voce-form">
+                    <label for="inpLiveStreamUrlModale">URL Live:</label>
+                    <input type="text" placeholder="Inserisci L'Url della live del lancio..." id="inpLiveStreamUrlModale">
+                </div>
+    
+                <button type="submit" class="btn-backoffice" id="btnFormCountdown">Salva modifica</button>
+            </form>
+        </div>
+    </section>
+
+    <main id="main" class="">
+        <div class="container-nav">
+            <div class="container-pag-backoffice">
+                <a class="btn-backoffice" href="agg_company.html">Aggiungi un'Azienda</a>
+                <a class="btn-backoffice" href="agg_razzi.html">Aggiungi un razzo</a>
+                <a class="btn-backoffice" href="agg_countdown.html">Aggiungi un countdown</a>
+                <a class="btn-backoffice" href="gestisci_home.html">Gestisci la home</a>
+            </div>
+            <button id="btnLogout" class="btn-backoffice">Logout</button>
+        </div>
+        <h1>BackOffice - Aggiungi un countdown</h1>
+        <form id="countdownForm">
+            <div class="container-voce-form">
+                <label for="inpRocket">Rocket:</label>
+                <select name="inpRocket" id="inpRocket">
+
+                </select>
+            </div>
+
+            <div class="container-voce-form">
+                <label for="inplaunchSite">Launch SIte:</label>
+                <input type="text" placeholder="Inserisci il sito di lancio..." id="inpLaunchSite">
+            </div>
+
+            <div class="container-voce-form">
+                <label for="inpStatus">Status: </label>
+                <select name="inpStatus" id="inpStatus">
+                    <option value="attivo">Attivo</option>
+                    <option value="in pausa">In pausa</option>
+                    <option value="cancellato">Cancellato</option>
+                </select>
+            </div>
+
+            <div class="container-voce-form">
+                <label for="inpLaunchDate">Launch Date:</label>
+                <input type="datetime-local" id="inpLaunchDate">
+            </div>
+
+            <div class="container-voce-form">
+                <label for="inpDescription">Description:</label>
+                <input type="text" placeholder="Inserisci la descrizione del lancio..." id="inpDescription">
+            </div>
+
+            <div class="container-voce-form">
+                <label for="inpLiveStreamUrl">URL Live:</label>
+                <input type="text" placeholder="Inserisci L'Url della live del lancio..." id="inpLiveStreamUrl">
+            </div>
+
+            <button type="submit" class="btn-backoffice" id="btnFormCountdown">Crea</button>
+        </form>
+
+        <section class="render-api" id="renderApi">
+
+        </section>
+    </main>
+
+
+</body>
+<script type="module" src="countdownBackoffice.js"></script>
+</html>

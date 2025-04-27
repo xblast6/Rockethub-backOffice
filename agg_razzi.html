@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackOffice - Aggiungi un razzo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="modale" class="container-modale">
+        <div class="container-form-modale">
+            <div class="container-info-modale">
+                <h3>Modifica i dati del razzo</h3>
+                <p class="chiudi-modale" id="chiudiModale">&times;</p>
+            </div>
+            <input type="hidden" id="razziIdModale">
+            <form id="formRazzoModale">
+                <div class="container-voce-form divisore">
+                    <label for="rocketNameModale">Name:</label>
+                    <input id="rocketNameModale" type="text" placeholder="Modifica il nome del razzo...">
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketimageModale">Image:</label>
+                    <input id="rocketimageModale" type="file" >
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketCompanyModale">Company:</label>
+                    <select name="rocketCompanyModale" id="rocketCompanyModale">
+                        
+                    </select>
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketHeightModale">height:</label>
+                    <input id="rocketHeightModale" type="number" placeholder="Modifica l'altezza del razzo..." inputmode="decimal" step="any">
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketDiameterModale">Diameter:</label>
+                    <input id="rocketDiameterModale" type="number" placeholder="Inserisci il diametro del razzo..." inputmode="decimal" step="any">
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketMassModale">Mass:</label>
+                    <input id="rocketMassModale" type="number" placeholder="Inserisci la massa del razzo..." inputmode="decimal" step="any">
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketNumStagesModale">Number of stages:</label>
+                    <input id="rocketNumStagesModale" type="number" placeholder="Inserisci il numero di stadi del razzo...">
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketFirstStageModale">First stage engine:</label>
+                    <div class="container-inp-doppi">
+                        <input id="rocketFirstStageModale" type="string" placeholder="Inserisci il nome dei motori del primo stadio...">
+                    <input id="rocketFirstStageEngineModale" type="number" placeholder="Inserisci il numero di motori del primo stadio...">
+                    </div>
+                </div>
+                <div class="container-voce-form divisore">
+                    <label for="rocketSecondStageModale">Second stage engine:</label>
+                    <div class="container-inp-doppi">
+                        <input id="rocketSecondStageModale" type="string" placeholder="Inserisci il nome dei motori del secondo stadio...">
+                    <input id="rocketSecondStageEngineModale" type="number" placeholder="Inserisci il numero di motori del secondo stadio...">
+                    </div>
+                </div>
+                <div class="container-voce-form">
+                    <label for="rocketThirdStageModale">Third stage engine:</label>
+                    <div class="container-inp-doppi">
+                        <input id="rocketThirdStageModale" type="string" placeholder="Inserisci il nome dei motori del terzo stadio...">
+                        <input id="rocketThirdStageEngineModale" type="number" placeholder="Inserisci il numero di motori del terzo stadio...">
+                        <label for="opzionaleModale">Opzionale</label>
+                        <select name="opzionaleModale" id="opzionaleModale">
+                            <option value="true">si</option>
+                            <option value="false">no</option>
+                        </select>    
+                    </div>
+                </div>
+                <button type="submit" class="btn-backoffice" id="btnCrea">Crea</button>
+            </form>
+        </div>
+    </section>
+
+    <main id="main" class="">
+        <div class="container-nav">
+            <div class="container-pag-backoffice">
+                <a class="btn-backoffice" href="agg_company.html">Aggiungi un'Azienda</a>
+                <a class="btn-backoffice" href="agg_razzi.html">Aggiungi un razzo</a>
+                <a class="btn-backoffice" href="agg_countdown.html">Aggiungi un countdown</a>
+                <a class="btn-backoffice" href="gestisci_home.html">Gestisci la home</a>
+            </div>
+            <button id="btnLogout" class="btn-backoffice">Logout</button>
+        </div>
+        <h1>BackOffice - Aggiungi un razzo</h1>
+        <form id="formRazzo">
+            <div class="container-voce-form divisore">
+                <label for="rocketName">Name:</label>
+                <input id="rocketName" type="text" placeholder="Inserisci il nome del razzo...">
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketimage">Image:</label>
+                <input id="rocketimage" type="file" >
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketCompany">Company:</label>
+                <select name="rocketCompany" id="rocketCompany">
+                    
+                </select>
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketHeight">height:</label>
+                <input id="rocketHeight" type="number" placeholder="Inserisci l'altezza del razzo..." inputmode="decimal" step="any">
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketDiameter">Diameter:</label>
+                <input id="rocketDiameter" type="number" placeholder="Inserisci il diametro del razzo..." inputmode="decimal" step="any">
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketMass">Mass:</label>
+                <input id="rocketMass" type="number" placeholder="Inserisci la massa del razzo..." inputmode="decimal" step="any">
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketNumStages">Number of stages:</label>
+                <input id="rocketNumStages" type="number" placeholder="Inserisci il numero di stadi del razzo...">
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketFirstStage">First stage engine:</label>
+                <div class="container-inp-doppi">
+                    <input id="rocketFirstStage" type="text" placeholder="Inserisci il nome dei motori del primo stadio...">
+                    <input id="rocketFirstStageEngine" type="number" placeholder="Inserisci il numero di motori del primo stadio...">
+                </div>
+            </div>
+            <div class="container-voce-form divisore">
+                <label for="rocketSecondStage">Second stage engine:</label>
+                <div class="container-inp-doppi">
+                    <input id="rocketSecondStage" type="text" placeholder="Inserisci il nome dei motori del secondo stadio...">
+                    <input id="rocketSecondStageEngine" type="number" placeholder="Inserisci il numero di motori del secondo stadio...">
+                </div>
+            </div>
+            <div class="container-voce-form">
+                <label for="rocketThirdStage">Third stage engine:</label>
+                <div class="container-inp-doppi">
+                    <input id="rocketThirdStage" type="text" placeholder="Inserisci il nome dei motori del terzo stadio...">
+                    <input id="rocketThirdStageEngine" type="number" placeholder="Inserisci il numero di motori del terzo stadio...">
+                    <label for="opzionale">Opzionale</label>
+                    <select name="opzionale" id="opzionale">
+                        <option value="true">si</option>
+                        <option value="false">no</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn-backoffice" id="btnCrea">Crea</button>
+        </form>
+        <section class="render-api" id="renderApi">
+
+        </section>
+    </main>
+
+
+</body>
+<script type="module" src="razziBackOffice.js"></script>
+</html>

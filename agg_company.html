@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackOffice - Aggiungi un'azienda</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="modale" class="container-modale">
+        <div class="container-form-modale">
+            <div class="container-info-modale">
+                <h3>Modifica i dati dell'azienda</h3>
+                <p class="chiudi-modale" id="chiudiModale">&times;</p>
+            </div>
+            <form id="formModale">
+                <input type="hidden" id="companyIdModale">
+                <div class="container-voce-form">
+                    <label for="name">Name:</label>
+                    <input id="companyNameModale" type="text" placeholder="Inserisci il nome dell'Azienda...">
+                </div>
+                <div class="container-voce-form file-upload">
+                    <label for="logo">Logo:</label>
+                    <input id="companyLogoModale" type="file" >
+                </div>
+                <div class="container-voce-form">
+                    <label for="headquarters">Headquarters:</label>
+                    <input id="companyHeadquartersModale" type="text" placeholder="Inserisci la sede...">
+                </div>
+                <div class="container-voce-form">
+                    <label for="website">Website:</label>
+                    <input id="companyWebsiteModale" type="text" placeholder="Inserisci l'URL del sito originale'...">
+                </div>
+                <button type="submit" class="btn-backoffice" id="btnSalvaModifiche">Salva le modifiche</button>
+            </form>
+        </div>
+    </section>
+
+    <main id="main" class="">
+        <div class="container-nav">
+            <div class="container-pag-backoffice">
+                <a class="btn-backoffice" href="agg_company.html">Aggiungi un'Azienda</a>
+                <a class="btn-backoffice" href="agg_razzi.html">Aggiungi un razzo</a>
+                <a class="btn-backoffice" href="agg_countdown.html">Aggiungi un countdown</a>
+                <a class="btn-backoffice" href="gestisci_home.html">Gestisci la home</a>
+            </div>
+            <button id="btnLogout" class="btn-backoffice">Logout</button>
+        </div>
+        <h1>BackOffice - Aggiungi un' Azienda</h1>
+        <form id="formAzienda">
+            <div class="container-voce-form">
+                <label for="name">Name:</label>
+                <input id="companyName" type="text" placeholder="Inserisci il nome dell'Azienda...">
+            </div>
+            <div class="container-voce-form">
+                <label for="logo">image:</label>
+                <input id="companyLogo" type="file" >
+            </div>
+            <div class="container-voce-form">
+                <label for="headquarters">Headquarters:</label>
+                <input id="companyHeadquarters" type="text" placeholder="Inserisci la sede...">
+            </div>
+            <div class="container-voce-form">
+                <label for="website">Website:</label>
+                <input id="companyWebsite" type="text" placeholder="Inserisci l'URL del sito originale'...">
+            </div>
+            <button type="submit" class="btn-backoffice" id="btnCrea">Crea</button>
+        </form>
+        <section class="render-api" id="renderApi">
+
+        </section>
+    </main>
+
+
+</body>
+<script type="module" src="companyBackOffice.js"></script>
+</html>

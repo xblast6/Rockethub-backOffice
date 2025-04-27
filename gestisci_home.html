@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackOffice - Gestisci la home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<section id="modaleHome" class="container-modale" style="display:none;">
+    <div class="container-form-modale">
+      <div class="container-info-modale">
+        <h3 id="modaleTitle">Modifica Contenuto</h3>
+        <p class="chiudi-modale" id="chiudiModaleHome">&times;</p>
+      </div>
+      <form id="formHomeModale">
+        <div id="modaleContent">
+        </div>
+        <button type="submit" class="btn-backoffice" id="btnModificaHome">Modifica</button>
+      </form>
+    </div>
+  </section>
+  
+    <main>
+        <div class="container-nav">
+            <div class="container-pag-backoffice">
+                <a class="btn-backoffice" href="agg_company.html">Aggiungi un'Azienda</a>
+                <a class="btn-backoffice" href="agg_razzi.html">Aggiungi un razzo</a>
+                <a class="btn-backoffice" href="agg_countdown.html">Aggiungi un countdown</a>
+                <a class="btn-backoffice" href="gestisci_home.html">Gestisci la home</a>
+            </div>
+            <button id="btnLogout" class="btn-backoffice">Logout</button>
+        </div>
+        <h1>BackOffice - Gestisci la home</h1>
+        <form id="formHome">
+            <div class="container-voce-form">
+                <label for="video">Video: </label>
+                <div class="container-inp-doppi">
+                    <input type="file" name="video" id="video">
+                    <label for="videoCta">Testo video:</label>
+                    <input type="text" name="videoCta" id="videoCta" placeholder="Inserisci testo...">
+                </div>
+            </div>
+
+            <div class="container-voce-form">
+                <label for="firstImage">Prima immagine: </label>
+                <div class="container-inp-doppi">
+                    <input type="file" name="firstImage" id="firstImage">
+                    <label for="firstCta">Prima CTA: </label>
+                    <input type="text" name="firstCta" id="firstCta" placeholder="Inserisci una CTA...">
+                </div> 
+            </div>
+
+            <div class="container-voce-form">
+                <label for="secondImage">Seconda immagine: </label>
+                <div class="container-inp-doppi">
+                    <input type="file" name="secondImage" id="secondImage">
+                    <label for="secondtCta">Seconda CTA: </label>
+                    <input type="text" name="secondtCta" id="secondtCta" placeholder="Inserisci una CTA...">
+                </div>
+            </div>
+
+            <div class="container-voce-form">
+                <label for="thirdImage">Terza immagine: </label>
+                <div class="container-inp-doppi">
+                    <input type="file" name="thirdImage" id="thirdImage">
+                    <label for="thirdCta">Terza CTA: </label>
+                    <input type="text" name="thirdCta" id="thirdCta" placeholder="Inserisci una CTA...">
+                </div>
+            </div>
+
+            <button type="submit" id="btnCrea" class="btn-backoffice">Crea</button>
+        </form>
+    </main>
+
+    <section class="render-api" id="renderApi">
+
+    </section>
+
+
+</body>
+<script type="module" src="homeBackoffice.js"></script>
+</html>
