@@ -9,7 +9,7 @@ formLogin.addEventListener("submit", async (e) => {
     const password = document.querySelector('input[name="password"]').value;
     
     try {
-      const response = await fetch('http://localhost:5010/auth/login', {
+      const response = await fetch('https://rockethub.onrender.com/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password })

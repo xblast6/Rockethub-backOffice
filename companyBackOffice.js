@@ -6,7 +6,7 @@ const inpCompanyWebsite = document.getElementById("companyWebsite");
 const renderApi = document.getElementById("renderApi");
 const main = document.getElementById("main")
 
-const urlCompanies = "http://localhost:5010/companies"
+const urlCompanies = "https://rockethub.onrender.com/companies"
 
 
 document.addEventListener("DOMContentLoaded", fetchCompanies);
@@ -16,7 +16,7 @@ async function uploadImage(file) {
     const formData = new FormData();
     formData.append("image", file);
 
-    const response = await fetch("http://localhost:5010/upload", {
+    const response = await fetch("https://rockethub.onrender.com/upload", {
         method: "POST",
         headers: {
             "Authorization": `Bearer ${token}`

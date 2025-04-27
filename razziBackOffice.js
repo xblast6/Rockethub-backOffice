@@ -39,8 +39,8 @@ const inpRocketThirdStageEngineModale = document.getElementById("rocketThirdStag
 const inpRocketThirdStageOpzionaleModale = document.getElementById("opzionaleModale")
 
 
-const urlRockets = "http://localhost:5010/rockets"
-const urlCompanies = "http://localhost:5010/companies";
+const urlRockets = "https://rockethub.onrender.com/rockets"
+const urlCompanies = "https://rockethub.onrender.com/companies";
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchCompanies()
@@ -53,7 +53,7 @@ async function uploadImage(file) {
     const formData = new FormData();
     formData.append("image", file);
 
-    const response = await fetch("http://localhost:5010/upload", {
+    const response = await fetch("https://rockethub.onrender.com/upload", {
         method: "POST",
         headers: {
             "Authorization": `Bearer ${token}`

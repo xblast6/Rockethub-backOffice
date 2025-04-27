@@ -15,7 +15,7 @@ const modaleTitle = document.getElementById("modaleTitle");
 let editingType = null;
 let editingIndex = null;
 
-const homeUrl = "http://localhost:5010/home";
+const homeUrl = "https://rockethub.onrender.com/home";
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchHome();

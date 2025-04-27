@@ -17,8 +17,8 @@ const inpDescriptionModale = document.getElementById("inpDescriptionModale")
 const inpLiveStreamUrlModale = document.getElementById("inpLiveStreamUrlModale")
 
 
-const urlCountdown = "http://localhost:5010/countdowns"
-const urlRockets = "http://localhost:5010/rockets"
+const urlCountdown = "https://rockethub.onrender.com/countdowns"
+const urlRockets = "https://rockethub.onrender.com/rockets"
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchRockets()
